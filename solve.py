@@ -49,8 +49,6 @@ def generate_moves(pos):
         moves += [1]
     if pos >= 2:
         moves += [2]
-    if pos >= 3:
-        moves += [3]
     return moves
 
 if __name__ == "__main__":
