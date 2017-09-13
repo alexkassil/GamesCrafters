@@ -4,6 +4,14 @@ def main():
 #   print(solve(init_pos, primitive, generate_moves, do_move))
 
 def primitive(pos):
+    """
+    Return 'L' loss if players turn to take, and unable to take, aka
+    pos == 0, else 'U' undecided
+    >>> primitive(4)
+    'U'
+    >>> primitive(0)
+    'L'
+    """
     if pos == 0:
         return 'L'
     return 'U'
