@@ -1,7 +1,31 @@
 def main():
-    init_pos = 4
     print(init_pos)
-#   print(solve(init_pos, primitive, generate_moves, do_move))
+    print(solve(init_pos, primitive, generate_moves, do_move))
+
+def solve(init_pos, primitive, generate_moves, do_move):
+    results = []
+    moves = generate_moves(init_pos)
+    for move in moves:
+        result = primitive(do_move(init_pos, move))
+        if result == 'L':
+            results += [opposite(result)]
+        else:
+            results += [opposite(solve(init_pos-move, primitive, generate_moves, do_move))]
+        #recursive step
+    if 'W' in results:
+        return 'W'
+    else:
+        return 'L'
+
+            
+def opposite(DWULT):
+    if DWULT == 'L':
+        return 'W'
+    else:
+        return 'L'
+            
+# The initial position
+init_pos = 4
 
 def primitive(pos):
     """

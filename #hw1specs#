@@ -1,0 +1,19 @@
+HW #1
+
+Solve 4-0
+
+def main():
+	solve(...) -> DWLT
+
+define
+initial_pos
+primitive(pos) -> DW(U)LT
+generate_moves(pos) -> [action]
+do_move(pos, move) -> pos
+
+if __name__ == '__main__':
+   main()
+   ! This limits the scope of the function from
+   the global frame to a more local frame
+
+Due Monday September 18th?
