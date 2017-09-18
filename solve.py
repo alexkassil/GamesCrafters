@@ -5,13 +5,15 @@ def main():
 def solve(init_pos, primitive, generate_moves, do_move):
     results = []
     moves = generate_moves(init_pos)
+    # Find the different solutions
     for move in moves:
         result = primitive(do_move(init_pos, move))
+        # recursive step
         if result == 'L':
             results += [opposite(result)]
         else:
             results += [opposite(solve(init_pos-move, primitive, generate_moves, do_move))]
-        #recursive step
+    # Check if there is a winning branch
     if 'W' in results:
         return 'W'
     else:
