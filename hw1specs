@@ -1,3 +1,12 @@
+H2 #2
+
+Add remoteness
+
+- win as fast as possible
+- lose as slow as possible
+
+instead of printing out DWULT, print tuple with DWULT and remoteness
+
 HW #1
 
 Solve 4-0
@@ -16,4 +25,4 @@ if __name__ == '__main__':
    ! This limits the scope of the function from
    the global frame to a more local frame
 
-Due Monday September 18th?
+Due Monday September 18th
